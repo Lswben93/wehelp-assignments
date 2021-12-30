@@ -37,7 +37,7 @@ body{
     font-size: 40px;
     margin-bottom: 10px;
 }
-.mh>.text{
+.mh>.logo{
     text-align: center;
     height: 40px;
 }
@@ -51,6 +51,8 @@ main{
     flex-wrap: wrap;
     justify-content:center; 
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 .middle{
     flex: none;
@@ -62,19 +64,41 @@ main{
 }
 .title{
     flex: none;
+    justify-content:center; 
+    align-items: center;
     width: 280px;
-    margin: 10px;
+    margin: 10px; 
+}
+.jpg{
+    width: 280px;
+    display: block;
+}
+.text{
+    width: 280px;
+    height: 30px;
+    line-height: 30px;
     text-align: center;
     background-color: #A6FFFF;
-}
-.src{
-    flex: none;
-    width: 280px;
-    margin: 10px;
+    position: relative;
 }
 @media screen and (max-width:1200px){
     main{
+        width: auto;
+    }
+    .box{
+        width: 100%;
+    }
+    .middle{
+        width: 100%;
+    }
+    .title{
         width: 45%;
+    }
+    .jpg{
+        width: 100%;
+    }
+    .text{
+        width: 100%;
     }
 }
 @media screen and (max-width:600px){
@@ -85,9 +109,18 @@ main{
         display: none;
     }
 	main{
-        width: 90%;
+        width: 100%;
     }
     .middle{
-        width: 300px;
+        width: 100%;
+    }
+    .title{
+        width: 90%;
+    }
+    .jpg{
+        width: 100%;
+    }
+    .text{
+        width: 100%;
     }
 }
