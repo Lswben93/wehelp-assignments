@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Javascript</title>
+<script type="text/javascript">
+	function avg(data){
+        var sum=0;
+        var count=data["count"];
+        var employees=data["employees"];
+        var John=employees[0];
+        var John_salary=John["salary"];
+        var Bob=employees[1];
+        var Bob_salary=Bob["salary"];
+        var Jenny=employees[2];
+        var Jenny_salary=Jenny["salary"];
+        var sum=John_salary+Bob_salary+Jenny_salary;
+        avg=sum/count;
+        console.log(avg);
+    }
+    avg({
+        "count":3,
+        "employees":[
+            {
+                "name":"John",
+                "salary":30000
+            },
+            {
+                "name":"Bob",
+                "salary":60000
+            },
+            {
+                "name":"Jenny",
+                "salary":50000
+            },
+        ]
+    });
+</script>
+</head>
+<body>
+
+</body>
+</html>

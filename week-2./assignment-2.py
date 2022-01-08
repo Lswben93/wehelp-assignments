@@ -1,0 +1,30 @@
+def avg(data):
+    sum=0
+    count=data["count"]
+    employees=data["employees"]
+    John=employees[0]
+    John_salary=John["salary"]
+    Bob=employees[1]
+    Bob_salary=Bob["salary"]
+    Jenny=employees[2]
+    Jenny_salary=Jenny["salary"]
+    sum=John_salary+Bob_salary+Jenny_salary
+    avg=sum/count
+    print("The salary average:",avg)
+avg({
+    "count":3,
+    "employees":[
+        {
+            "name":"John",
+            "salary":30000
+        },
+        {
+            "name":"Bob",
+            "salary":60000
+        },
+        {
+            "name":"Jenny",
+            "salary":50000
+        },
+]
+})

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Javascript</title>
+<script type="text/javascript">
+	function maxZeros(nums){
+        var maxtime=0;
+        var currecttime=0;
+        for(var i in nums){
+            if(nums[i] == 0){
+                currecttime+=1;
+                maxtime=Math.max(currecttime,maxtime);
+            }
+            else{
+                currecttime=0;
+            };
+        };       
+    console.log(maxtime);
+    };
+maxZeros([0,1,0,0]);
+maxZeros([1,0,0,0,0,1,0,1,0,0]);
+maxZeros([1,1,1,1,1]);
+maxZeros([0,0,0,1,1]);
+</script>
+</head>
+<body>
+
+</body>
+</html>
