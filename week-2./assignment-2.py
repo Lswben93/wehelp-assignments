@@ -1,16 +1,8 @@
 def avg(data):
     sum=0
-    count=data["count"]
-    employees=data["employees"]
-    John=employees[0]
-    John_salary=John["salary"]
-    Bob=employees[1]
-    Bob_salary=Bob["salary"]
-    Jenny=employees[2]
-    Jenny_salary=Jenny["salary"]
-    sum=John_salary+Bob_salary+Jenny_salary
-    avg=sum/count
-    print("The salary average:",avg)
+    for i in range(0,data["count"]):
+            sum += data["employees"][i]["salary"]
+    print(sum/data["count"])  
 avg({
     "count":3,
     "employees":[

@@ -6,17 +6,10 @@
 <script type="text/javascript">
 	function avg(data){
         var sum=0;
-        var count=data["count"];
-        var employees=data["employees"];
-        var John=employees[0];
-        var John_salary=John["salary"];
-        var Bob=employees[1];
-        var Bob_salary=Bob["salary"];
-        var Jenny=employees[2];
-        var Jenny_salary=Jenny["salary"];
-        var sum=John_salary+Bob_salary+Jenny_salary;
-        avg=sum/count;
-        console.log(avg);
+        for(let i =0 ; i< data["count"] ; i++){
+                sum += data["employees"][i]["salary"];
+            }
+        console.log(sum/data["count"]);  
     }
     avg({
         "count":3,
