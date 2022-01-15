@@ -1,0 +1,137 @@
+body{
+    margin: 0px; 
+    font-size: 20px;
+    font-family: 'Times New Roman';
+}
+.menu_btn{
+    display: none;
+    position: absolute;
+    height: 0px;
+    right: 0px;
+}
+.menu{
+    display:flex;
+}
+.mw{
+    flex: auto;
+    width: auto;
+    height: 30px;
+    margin-left: 10px;
+    line-height: 30px;
+    align-items: center;
+}
+.menu>.item{
+    flex: none;
+    height: 30px;
+    margin-right: 20px;
+    line-height: 30px;
+    width: auto;
+    text-align: center;
+}
+.item1{
+    box-sizing: border-box;
+}
+.mh{
+    display: flex;
+    background-color: #A6FFFF;
+    justify-content:center; 
+    align-items:center;
+    height: 300px;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.mh>.logo{
+    text-align: center;
+    height: 40px;
+}
+main{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center; 
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.middle{
+    flex: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center; 
+    align-items: center;
+    width: 600px;
+}
+.title{
+    flex: none;
+    justify-content:center; 
+    align-items: center;
+    width: 280px;
+    height: 230px;
+    margin: 10px; 
+}
+.jpg{
+    width: 280px;
+    display: block;
+}
+.text{
+    width: 280px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #A6FFFF;
+    position: relative;
+}
+@media screen and (max-width:1200px){
+    main{
+        width: auto;
+    }
+    .box{
+        width: 100%;
+    }
+    .middle{
+        width: 100%;
+    }
+    .title{
+        width: 45%;
+    }
+    .jpg{
+        width: 100%;
+    }
+    .text{
+        width: 100%;
+    }
+}
+@media screen and (max-width:600px){
+    .menu_btn{
+        display: block;
+    }
+    .show{
+        display: none;
+    }
+    .wrapper{
+        display: grid;
+    }
+    .menu>.item{
+        display: none;
+    }
+	main{
+        width: 100%;
+    }
+    .middle{
+        width: 100%;
+    }
+    .title{
+        width: 90%;
+    }
+    .jpg{
+        width: 100%;
+    }
+    .text{
+        width: 100%;
+    }
+}

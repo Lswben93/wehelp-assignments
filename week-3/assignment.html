@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name='viewport' content="width=device-width, initial-scale=1.0" charset="utf-8"/>
+<title>Shih-Wei Lin's RWD Homework</title>
+<link href="rwd.css" rel="stylesheet" />
+<script>
+    let url="https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assignment.json";
+    let request=new XMLHttpRequest();
+    request.open('GET', url);
+    request.onload = statechange;
+    request.send();
+    function statechange() {
+        let data = JSON.parse(request.responseText);
+        let index=0;
+        for(let i=0;i<2;i++){
+            let position = document.getElementsByClassName('box')[i];
+                for(let j=0;j<2;j++){
+                    let position1 = position.getElementsByClassName('middle')[j];
+                    for(let k=0;k<2;k++){
+                        let position2 = position1.getElementsByClassName('title')[k];
+                        let stitle = data["result"]["results"][index]["stitle"];
+                        let file=data["result"]["results"][index]["file"];
+                        let b=file.replace("jpghttps","jpg,https");
+                        let c=b.split(",");
+                        let newElmimg = document.createElement('img');
+                        newElmimg.src = c[0];
+                        newElmimg.className="jpg";
+                        newElmimg.width =280;
+                        newElmimg.height=210;
+                        position2.appendChild(newElmimg);
+                        let newElm = document.createElement('div');
+                        newElm.className = "text";
+                        let newText = document.createTextNode(stitle);
+                        newElm.appendChild(newText);
+                        position2.appendChild(newElm);
+                        index++;
+                }
+            }
+        }
+    }
+</script>
+</head>
+<body>
+    <div class="menu_btn"><img src="hamburger_menu.png" /></div>
+    <nav class="menu">
+        <div class="mw">My Website</div>
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </nav>
+    <div class="mh">
+        <div class="logo">Welcome to MyHome</div>
+    </div>
+    <main>
+        <div class="box">
+            <div class="middle">
+                <div class="title">
+                </div>
+                <div class="title">
+                </div>
+            </div>
+            <div class="middle">
+                <div class="title">
+                </div>
+                <div class="title">
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="middle">
+                <div class="title">
+                </div>
+                <div class="title">
+                </div>
+            </div>
+            <div class="middle">
+                <div class="title">
+                </div>
+                <div class="title">
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
