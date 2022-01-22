@@ -47,7 +47,3 @@ def signout():
 
 
 app.run(port=3000)
-
-#待解決問題
-#1.使用者必須登入才能看到使用者頁面
-#2.session紀錄
