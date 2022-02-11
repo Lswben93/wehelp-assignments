@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>帳號密碼登入</title>
+        <style type="text/css">
+            body{
+                margin: 0px; 
+                font-size: 20px;
+                font-family: 'Times New Roman';
+            }
+            .welcome{
+                font-size: 100px;
+                text-align: center;
+                height: 200px;
+                background-color: aquamarine;
+                align-items: center;
+            }
+            .success{
+                font-size: 50px;
+                position: relative;
+                text-align: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="welcome">歡迎光臨，這是會員頁</div>
+        <div class="success">{{ name }}，歡迎登入系統</div>
+        <div class="success">
+            <a href="/signout">登出系統</a>
+        </div>
+    </body>
+</html>
