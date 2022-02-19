@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>帳號密碼登入</title>
+        <style type="text/css">
+            body{
+                margin: 0px; 
+                font-size: 20px;
+                font-family: 'Times New Roman';
+            }
+            .welcome{
+                font-size: 100px;
+                text-align: center;
+                height: 200px;
+                background-color: aquamarine;
+                align-items: center;
+            }
+            .success{
+                font-size: 50px;
+                position: relative;
+                text-align: center;
+                align-items: center;
+            }
+            .search{
+                font-size: 50px;
+                position: relative;
+                text-align: center;
+                align-items: center;
+            }
+            .main{
+                font-size: 30px;
+                margin: 5px;
+                text-align: center;
+                align-items: center;
+            }
+        </style>
+        <script type="text/javascript">
+           function submit(){                
+                let uri = 'http://127.0.0.1:3000/api/members?username=' + document.getElementById("username").value;
+                fetch(uri)
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(response){
+                    if (response.data==null){
+                        document.getElementById("name").innerText ="查無此人";
+                    }
+                    else{
+                    document.getElementById("name").innerText = response.data.name;
+                    document.getElementById("resultusername").innerText= "("+response.data.username+")";
+                    }
+                })
+        }
+        </script>
+    </head>
+    <body>
+        <div class="welcome">歡迎光臨，這是會員頁</div>
+        <div class="success">{{ name }}，歡迎登入系統</div>
+        <div class="success">
+            <a href="/signout">登出系統</a>
+        </div><br>
+        <div class="success">查詢會員姓名</div>
+        <div class="search"><input type="text" id="username">
+        <button onclick="submit();">查詢</button></div>
+        <div class="search">
+            <div id="name"></div><div id="resultusername"></div>
+        </div>
+    </body>
+</html>
